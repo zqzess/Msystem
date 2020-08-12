@@ -1,0 +1,40 @@
+﻿生成启动时间为 2019/8/8 9:17:26。
+     1>项目“C:\Users\TR\Desktop\zqz\MsystemServer\MsystemServer\MsystemServer.vcxproj”在节点 2 上(build 个目标)。
+     1>InitializeBuildStatus:
+         正在创建“Debug\MsystemServer.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         所有输出均为最新。
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\MsystemServer.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MsystemServerDlg.cpp
+         MsystemServerDlg.cpp
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(125): warning C4305: “参数”: 从“int”到“u_short”截断
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(125): warning C4309: “参数”: 截断常量值
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(332): warning C4309: “=”: 截断常量值
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(445): warning C4309: “=”: 截断常量值
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(474): warning C4309: “=”: 截断常量值
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(506): warning C4309: “=”: 截断常量值
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(306): warning C4101: “Item”: 未引用的局部变量
+     1>c:\users\tr\desktop\zqz\msystemserver\msystemserver\msystemserverdlg.cpp(381): warning C4101: “Item”: 未引用的局部变量
+       ResourceCompile:
+         所有输出均为最新。
+       ManifestResourceCompile:
+         所有输出均为最新。
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\TR\Desktop\zqz\MsystemServer\Debug\MsystemServer.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\MsystemServer.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\TR\Desktop\zqz\MsystemServer\Debug\MsystemServer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\TR\Desktop\zqz\MsystemServer\Debug\MsystemServer.lib" /MACHINE:X86 Debug\MsystemServer.res
+         Debug\MsystemServer.exe.embed.manifest.res
+         Debug\MsystemServer.obj
+         Debug\MsystemServerDlg.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\MsystemServer.exe.embed.manifest" /manifest Debug\MsystemServer.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         所有输出均为最新。
+       LinkEmbedManifest:
+         所有输出均为最新。
+         MsystemServer.vcxproj -> C:\Users\TR\Desktop\zqz\MsystemServer\Debug\MsystemServer.exe
+       FinalizeBuildStatus:
+         正在删除文件“Debug\MsystemServer.unsuccessfulbuild”。
+         正在对“Debug\MsystemServer.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“C:\Users\TR\Desktop\zqz\MsystemServer\MsystemServer\MsystemServer.vcxproj”(build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.67

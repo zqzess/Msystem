@@ -285,13 +285,13 @@ void CMsystemcustomerDlg::OnBnClickedButton1()
 {
 
 
-	unsigned char check[10];
+	unsigned char check[5];
 	int m_len;
-	::memset(check,0,10);
-	check[0] = 0x11;
+	::memset(check,0,5);
+	check[0] = 0xE1;
 	m_len = 0;
 	memcpy(check+1,&m_len,4);
-	send(Socket,(char*)check,10,0);
+	send(Socket,(char*)check,5,0);
 
 	shutdown(Socket,SD_SEND);//断开套接字，只接受不能发送
 	closesocket(Socket);//关闭套接字
@@ -311,13 +311,13 @@ void CMsystemcustomerDlg::OnClose()
 {
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
 
-	unsigned char check[10];
+	unsigned char check[5];
 	int m_len;
-	::memset(check,0,10);
-	check[0] = 0x11;
+	::memset(check,0,5);
+	check[0] = 0xE1;
 	m_len = 0;
 	memcpy(check+1,&m_len,4);
-	send(Socket,(char*)check,10,0);
+	send(Socket,(char*)check,5,0);
 
 	shutdown(Socket,SD_SEND);//断开套接字，只接受不能发送
 	closesocket(Socket);//关闭套接字

@@ -44,5 +44,6 @@ public:
 //	CListCtrl m_listview;
 	afx_msg void OnBnClickedButton2();
 	CStatic m_notify;
+	afx_msg void OnBnClickedButton1();
 };
 

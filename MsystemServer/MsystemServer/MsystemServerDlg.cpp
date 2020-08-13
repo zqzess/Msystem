@@ -84,6 +84,7 @@ BEGIN_MESSAGE_MAP(CMsystemServerDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	//ON_BN_CLICKED(IDC_BUTTON1, &CMsystemServerDlg::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON2, &CMsystemServerDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON1, &CMsystemServerDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -240,18 +241,18 @@ DWORD WINAPI ConnectThread(LPVOID lpParameter)
 		SetWindowText(hwnd, _T("\n等待客户端连接"));
 		//MessageBox(NULL, _T("等待客户端连接"), _T("提示"), NULL);
 		int tmp=*ClientSocket = accept(ListenSocket, 0, 0);
-		MessageBox(NULL, _T("一个客户端成功连接"), _T("提示"), NULL);
+		//MessageBox(NULL, _T("一个客户端成功连接"), _T("提示"), NULL);
+		//HANDLE hThread;
 		CreateThread(NULL, 0, &ConnectEvent, ClientSocket, 0, NULL);
+		//CloseHandle(hThread);
 	}
-	
-
 	closesocket(ListenSocket);
 	return 0;
 }
 
 DWORD WINAPI ConnectEvent(LPVOID lpParameter)
 {
-	SOCKET *ClientSocket = (SOCKET*)lpParameter;
+	SOCKET *ClientSocket = (SOCKET*)lpParameter;//获取主线程传递的套接字
 	for (;;)
 	{
 		unsigned char check[125];
@@ -467,10 +468,6 @@ DWORD WINAPI ConnectEvent(LPVOID lpParameter)
 			}
 		}
 
-
-
-
-
 		else if (check[0] == 0xF6)
 		{//录入
 			CString Num;
@@ -585,8 +582,7 @@ DWORD WINAPI ConnectEvent(LPVOID lpParameter)
 			}
 		}
 
-
-		else if (check[0] = 0xE0)
+		else if (check[0] == 0xE0)
 		{
 			ifstream fin("学生个数.txt", ios::in);
 			fin >> num;
@@ -597,11 +593,13 @@ DWORD WINAPI ConnectEvent(LPVOID lpParameter)
 			send(*ClientSocket, number, 4, 0);
 		}
 
-		else if (check[0] == 0x11)
+		else if (check[0] == 0xE1)
 		{
 			shutdown(*ClientSocket, SD_SEND);//断开套接字，只接受不能发送
 			closesocket(*ClientSocket);//关闭套接字
-			free(ClientSocket);
+			break;
+			//free(ClientSocket);
+			
 		}
 
 	}//for大循环	
@@ -614,6 +612,16 @@ void CMsystemServerDlg::OnBnClickedButton2()
 
 	HANDLE hThread;
 	hThread = CreateThread(NULL, 0, ConnectThread, NULL, 0, NULL);
+	CloseHandle(hThread);	
+}
 
+
+void CMsystemServerDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	AfxGetMainWnd()->SendMessage(WM_CLOSE);//退出程序
 	
+	//关闭当前窗口用DestroyWindow( );
+
+	//关闭模式对话框用EndDialog(0);
 }

@@ -87,7 +87,18 @@ void Cmange::OnBnClickedButton1()
 	UpdateData();
 	if(Mnum1==""&&Mname1==""&&Mclass1=="")
 	{
-		
+		MessageBox(_T("请输入要查询的内容"));
+		m_list.DeleteAllItems();
+		int Item;
+		for (int i = 0; i<num; i++)
+		{
+			Item = m_list.GetItemCount();
+			m_list.InsertItem(Item, mstu[i].mNum);
+			m_list.SetItemText(Item, 1, mstu[i].mName);
+			m_list.SetItemText(Item, 2, mstu[i].mGender);
+			m_list.SetItemText(Item, 3, mstu[i].mClass);
+			m_list.SetItemText(Item, 4, mstu[i].mGrade);
+		}
 	}
 	
 	if(Mnum1!=""&&Mname1==""&&Mclass1=="")
@@ -126,6 +137,17 @@ void Cmange::OnBnClickedButton1()
 			SFCZ=FALSE;
 			MessageBox(_T("学号不存在"));
 			clean();
+			m_list.DeleteAllItems();
+			int Item;
+			for (int i = 0; i<num; i++)
+			{
+				Item = m_list.GetItemCount();
+				m_list.InsertItem(Item, mstu[i].mNum);
+				m_list.SetItemText(Item, 1, mstu[i].mName);
+				m_list.SetItemText(Item, 2, mstu[i].mGender);
+				m_list.SetItemText(Item, 3, mstu[i].mClass);
+				m_list.SetItemText(Item, 4, mstu[i].mGrade);
+			}
 		}
 	}
 
@@ -152,6 +174,17 @@ void Cmange::OnBnClickedButton1()
 			SFCZ=FALSE;
 			MessageBox(_T("姓名不存在"));
 			clean();
+			m_list.DeleteAllItems();
+			int Item;
+			for (int i = 0; i<num; i++)
+			{
+				Item = m_list.GetItemCount();
+				m_list.InsertItem(Item, mstu[i].mNum);
+				m_list.SetItemText(Item, 1, mstu[i].mName);
+				m_list.SetItemText(Item, 2, mstu[i].mGender);
+				m_list.SetItemText(Item, 3, mstu[i].mClass);
+				m_list.SetItemText(Item, 4, mstu[i].mGrade);
+			}
 		}
 	}
 
@@ -178,6 +211,17 @@ void Cmange::OnBnClickedButton1()
 			SFCZ=FALSE;
 			MessageBox(_T("查询信息不存在"));
 			clean();
+			m_list.DeleteAllItems();
+			int Item;
+			for (int i = 0; i<num; i++)
+			{
+				Item = m_list.GetItemCount();
+				m_list.InsertItem(Item, mstu[i].mNum);
+				m_list.SetItemText(Item, 1, mstu[i].mName);
+				m_list.SetItemText(Item, 2, mstu[i].mGender);
+				m_list.SetItemText(Item, 3, mstu[i].mClass);
+				m_list.SetItemText(Item, 4, mstu[i].mGrade);
+			}
 		}
 
 	}
@@ -206,6 +250,17 @@ void Cmange::OnBnClickedButton1()
 			SFCZ=FALSE;
 			MessageBox(_T("查询信息不存在"));
 			clean();
+			m_list.DeleteAllItems();
+			int Item;
+			for (int i = 0; i<num; i++)
+			{
+				Item = m_list.GetItemCount();
+				m_list.InsertItem(Item, mstu[i].mNum);
+				m_list.SetItemText(Item, 1, mstu[i].mName);
+				m_list.SetItemText(Item, 2, mstu[i].mGender);
+				m_list.SetItemText(Item, 3, mstu[i].mClass);
+				m_list.SetItemText(Item, 4, mstu[i].mGrade);
+			}
 		}
 
 	}
@@ -233,6 +288,17 @@ void Cmange::OnBnClickedButton1()
 			SFCZ=FALSE;
 			MessageBox(_T("查询信息不存在"));
 			clean();
+			m_list.DeleteAllItems();
+			int Item;
+			for (int i = 0; i<num; i++)
+			{
+				Item = m_list.GetItemCount();
+				m_list.InsertItem(Item, mstu[i].mNum);
+				m_list.SetItemText(Item, 1, mstu[i].mName);
+				m_list.SetItemText(Item, 2, mstu[i].mGender);
+				m_list.SetItemText(Item, 3, mstu[i].mClass);
+				m_list.SetItemText(Item, 4, mstu[i].mGrade);
+			}
 		}
 	}
 	if(Mnum1==""&&Mname1!=""&&Mclass1!="")
@@ -258,6 +324,17 @@ void Cmange::OnBnClickedButton1()
 			SFCZ=FALSE;
 			MessageBox(_T("查询信息不存在"));
 			clean();
+			m_list.DeleteAllItems();
+			int Item;
+			for (int i = 0; i<num; i++)
+			{
+				Item = m_list.GetItemCount();
+				m_list.InsertItem(Item, mstu[i].mNum);
+				m_list.SetItemText(Item, 1, mstu[i].mName);
+				m_list.SetItemText(Item, 2, mstu[i].mGender);
+				m_list.SetItemText(Item, 3, mstu[i].mClass);
+				m_list.SetItemText(Item, 4, mstu[i].mGrade);
+			}
 		}
 
 	}

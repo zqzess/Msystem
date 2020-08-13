@@ -7,3 +7,6 @@
 - 登录
 - 注册
 - 基本数据增删改查
+
+### ps:
+MsystemServer是服务端，Msystemcustomer是客户端
